@@ -1,7 +1,7 @@
 # Murojaah-juz30
-Web App untuk membantu murojaah juz 30.
-Cara kerjanya adalah dengan menampilkan ayat Al-Quran secara acak.
-Kemudian pengguna dapat menampilkan kunci jawaban berupa sambungan ayatnya.
+Web App untuk membantu murojaah juz 30.<br>
+Cara kerjanya adalah dengan menampilkan ayat Al-Quran secara acak.<br>
+Kemudian pengguna dapat menampilkan kunci jawaban berupa sambungan ayatnya.<br>
 
 Live Demo:
 https://murojaahjuz30.netlify.app/
@@ -16,6 +16,6 @@ Kekurangan / potensi pengembangan:
 
 ------------
 
-Acknowledgement:
-https://alquran.cloud/api
+Acknowledgement:<br>
+https://alquran.cloud/api<br>
 Thanks for providing a beneficial API.
