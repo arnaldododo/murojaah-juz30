@@ -4,9 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Murojaah Juz 30 (Amma)">
     <meta name="author" content="Muhammad Arnaldo">
-    <meta name="generator" content="Hugo 0.101.0">
     <title>Murojaah · Juz 30</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/heroes/">
@@ -17,66 +16,13 @@
     <meta name="theme-color" content="#712cf9">
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-        .b-example-divider {
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
-
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
-
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600&display=swap');
     </style>
-
-    <!-- Custom styles for this template -->
-    <!-- <link href="heroes.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-
     <main>
-
         <div class="container">
             <header class="d-flex justify-content-center py-3">
                 <h1 class="display-6"><i class="bi bi-book" style="color: cornflowerblue;"></i> Murojaah </h1>
@@ -187,83 +133,7 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script>
-        function randomin(min, max) {
-            return Math.floor(Math.random() * (max - min)) + min;
-        }
-
-        // Function to hide the loader
-        function hideloader() {
-            document.getElementById('loading').style.display = 'none';
-        }
-
-        function showloader() {
-            document.getElementById('loading').style.display = 'block';
-        }
-
-        // Function to define innerHTML for HTML table
-        function show(data) {
-            let wadah_audio = "<figure>" +
-                "<figcaption></figcaption>" +
-                "<audio controls autoplay src='" + data + "'>" +
-                "Your browser does not support the" +
-                "<code>audio</code> element." +
-                "</audio>" +
-                "</figure>";
-
-            var audionya =
-                document.getElementById("isi").innerHTML = wadah_audio;
-        }
-
-        function jawaban(data) {
-            document.getElementById("jawabannya").innerHTML = data;
-        }
-
-        function datanya(data) {
-            let datanya = "<p>Surah " + data.data.surah.englishName + " (" + data.data.surah.name + ")</p>" +
-                "<p>Surah ke-" + data.data.surah.number + " (" + data.data.surah.revelationType + ")</p>" +
-                "<p>Ayat ke-" + data.data.numberInSurah + ", dari " + data.data.surah.numberOfAyahs + " ayat.</p>" +
-                "";
-            document.getElementById("datanya").innerHTML = datanya;
-        }
-
-        // Defining async function
-        async function getaudio() {
-            var ayat = randomin(5673, 6236);
-            const api_url =
-                "https://api.alquran.cloud/v1/ayah/" + ayat + "/ar.alafasy";
-
-            // Storing response
-            const response = await fetch(api_url);
-
-            // Storing data in form of JSON
-            var data = await response.json();
-            console.log(data);
-            if (response) {
-                hideloader();
-            }
-            show(data.data.audio);
-            datanya(data);
-
-            let sambungannya = "";
-            for (let i = 1; i < 4; i++) {
-                const api = "https://api.alquran.cloud/v1/ayah/" + (ayat + i) + "/asad"
-                const response = await fetch(api);
-                const data = await response.json();
-                sambungannya += data.data.text + '  &#1645;  ' + '<br>';
-            }
-            jawaban(sambungannya);
-        }
-        // Calling that async function
-        $(document).ready(function () {
-            $("#mulai").click(function () {
-                document.getElementById('infoawal').style.display = 'none';
-                $('.multi-collapse').collapse('hide');
-                showloader();
-                getaudio();
-            });
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 
